@@ -1,0 +1,41 @@
+/* [Font] Roboto (300-400-700) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* ===== GLOBAL =============== */
+
+:root {
+    font-size: 62.5%; /* 1rem = 10px */
+    
+    --twitter-bg: #15202B;
+}
+
+body {
+    margin: 0;
+
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+
+    background-color: var(--twitter-bg);
+    color: #E7E9EA;
+}
+
+p {
+    margin: 0.4rem;
+    padding: 0;
+}
+
+
+
+/* ===== TWEET =============== */
+
+#tweet {
+    display: flex;
+    
+    padding: 12px;
+
+    border-block: 1px solid #71767B;
+}
+
+.tweet-img {
+    margin-right: 0.8rem;
+}
