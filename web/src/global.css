@@ -1,9 +1,13 @@
+/* [Font] Roboto (300-400-700) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* [Font] Roboto (300-400-700) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+html, body, #root {
+    height: 100%;
+}
 
 body {
     background-color: theme("colors.bgColor");
