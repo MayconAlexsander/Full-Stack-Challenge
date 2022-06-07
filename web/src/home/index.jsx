@@ -12,7 +12,7 @@ function TweetTextField({ loggedInUser, onSuccess }) {
       await axios({
 
         method: "post",
-        url: "http://localhost:9901/tweets",
+        url: `${import.meta.env.VITE_API_HOST}/tweets`,
         headers: {
           "authorization": `Bearer ${loggedInUser.accessToken}`
         },
@@ -63,7 +63,7 @@ function TweetTextField({ loggedInUser, onSuccess }) {
           <span className="text-sm">
             <span>{formik.values.text.length}</span> / <span className="text-birdBlue">{ MAX_TWEET_CHAR }</span>
           </span>
-          
+
           <button
             type="submit"
             className="bg-birdBlue px-5 py-2 rounded-full disabled:opacity-50"
@@ -113,7 +113,7 @@ export function Home({ loggedInUser }) {
   const [data, setData] = useState([])
   
   async function getData() {
-    const res = await axios.get("http://localhost:9901/tweets", {
+    const res = await axios.get(`${import.meta.env.VITE_API_HOST}/tweets`, {
       headers: {
         "authorization": `Bearer ${loggedInUser.accessToken}`
       }
